@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Desing responsivo</title>
+    <style>
+        /* Estilos na base Mobile First */
+        body{
+            font-family: Arial;
+            margin: 0;
+            padding: 10;
+            background-color: rgb(175, 175, 170);
+        }
+        header{
+            background-color: rgb(138, 138, 133);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container{
+            padding: 20px;
+
+        }
+        .card{
+            background-color: #2b2b2b;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px #2b2b2b;
+            margin-bottom: 15px;
+            padding: 15px;
+
+        }
+        
+
+        /* Media Queries: adapta o layout para telas maiores */
+        @media (min-width: 768px){
+            .cards{
+                display: flex;
+                gap: 20px;
+            }
+            .card{
+                flex: 1;
+            }
+        }
+
+        /* Containers Queries: adapta os elementos com base no tamanho do container */
+
+        @container (min-width: 600px){
+            .card h2{
+                font-size: 2rem;
+                color: #888a8a;
+            }
+        }
+            .card p{
+                color: white;
+            }
+
+        /* Definindo o container para ativar container queries  */
+
+        .cards {
+            container-type: inline-size;
+
+        }
+
+     </style>
+</head>
+<body>
+    <header>
+        <h1>Bom dia</h1>
+    </header>
+    <div class="container">
+        <p>Este exemplo mostra o uso do Mobilo First,Media Queries, Container Queries</p>
+        <div class="cards">
+            <div class="card">
+                <h2>dads</h2>
+                <p>Conteudo Responsivo adaptado ao tamanho da tela</p>
+            </div>
+             <div class="card">
+                <h2>Card 2</h2>
+                <p>Observe o comportamento ao redimensionar o navegador</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
